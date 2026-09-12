@@ -1,32 +1,37 @@
 # Warfare Front
 
-一战西线战壕策略游戏 · Windows 独立运行版。
+A standalone First World War trench strategy game for Windows.
 
-**[下载最新完整游戏](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest)**
+**[Download the latest complete game](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest)**
 
-在 Releases 的 **Assets** 中下载 `Warfare-Front-v33.1-Windows-x64.zip`，完整解压后双击 `WarfareFront.exe` 或 `Play.cmd`。无需安装 Unreal Engine、Epic Games Launcher，也无需登录游戏账号。请勿下载 GitHub 自动生成的 `Source code` 压缩包：本仓库用于发布成品，不包含开发工程。
+Under **Assets**, download `Warfare-Front-v35-Windows-x64.zip`. Extract the **entire ZIP**, then double-click **Play.cmd** or **WarfareFront.exe**. No Unreal Engine, Epic Games Launcher, development tools or game account are required. The game runs offline.
 
-## 运行要求
+Do **not** download GitHub's automatic `Source code` archives to play. This repository distributes finished game packages, not the development project.
 
-- Windows 10 22H2 / Windows 11，64 位。
-- 支持 DirectX 12 / Shader Model 6.6 的现代显卡及其当前稳定驱动；不提供 DX11、32 位、macOS 或 Linux 原生版本。
-- DLSS、光线重构和帧生成按显卡与驱动支持情况启用；不支持时自动回退。HDR 为可选功能，需要 Windows 和显示器均支持并启用 HDR。
-- 初次启动跟随桌面分辨率；超高分辨率桌面优先选择不超过 4K 像素预算的受支持模式。可在游戏内调整画质、分辨率、帧率上限和音量。
+## Language
 
-首次启动可能需要编译着色器，请稍候。若显示配置导致黑屏或无法正常显示，关闭游戏后双击 `Safe Mode.cmd`，以 1080p 窗口和原生渲染启动；该入口不保存显示设置，正常战役进度仍可保存。
+The interface defaults to **English**. Choose **Chinese** in Settings to switch immediately. Battlefield voices remain English and German. Release notes and diagnostic logs are in English.
 
-## 本次发布
+## Requirements
 
-V33.1 保留 V33 的最新游戏内容，改用 Shipping 构建并补齐随包 x64 VC++ 运行库，清除调试组件、开发工程、历史报告和个人存档。游戏及其必要的第三方许可随完整压缩包分发。
+- Windows 10 22H2 or Windows 11, 64-bit.
+- A DirectX 12 / Shader Model 6.6 GPU with current vendor drivers. A recent discrete GPU is recommended.
+- DLSS, Ray Reconstruction and Frame Generation depend on compatible NVIDIA hardware and drivers. Unsupported features fall back to native temporal rendering.
+- HDR is optional and requires a compatible display with Windows HDR enabled.
+- First launch adapts to desktop resolution and refresh rate; larger desktops use a supported mode within a 4K pixel budget. Display, graphics, frame cap, HDR, audio and language can be changed in Settings.
 
-发布检查涵盖独立目录解压启动、主菜单、战役载入、招募、随包 DLL 依赖与禁用 NVIDIA 功能后的原生回退。检查在开发机完成；尚未取得其他实体 AMD / Intel 显卡电脑的实测结果，不对所有硬件配置作保证。
+If normal launch has display problems, close the game and run **Safe Mode.cmd** for a 1080p SDR window with NVIDIA features disabled. This does not overwrite normal display preferences. It cannot make hardware without DX12 / SM6.6 support compatible.
 
-界面主要为中文，战场包含英语和德语语音。游戏包含战争暴力及血腥表现。
+The package includes the required Microsoft x64 C++ runtime. Windows N may require Microsoft's optional Media Feature Pack. This is not a native macOS, Linux or ARM64 release. Physical testing on every GPU, driver and display combination has not been performed.
 
-## 许可与鸣谢
+## Updating and saves
 
-本作是独立历史题材作品，并非 Armor Games 或《Warfare 1917》《Warfare 1944》的官方发行版，亦未获其背书。仅发布已封装游戏，不提供原作代码或资源。
+Each release ZIP is a complete game. Extract updates into a new folder; an older version is not needed. Campaign progress remains in `%LOCALAPPDATA%\Warfare1917\Progression-v13.json`; settings and logs are under `%LOCALAPPDATA%\WarfareFront\Saved\`.
 
-个人免费游玩；允许保留全部许可与署名后免费转发完整、未修改的发行包。详细条款及各素材来源见压缩包内 `GAME-LICENSE.txt`、`THIRD-PARTY-NOTICES.md` 与 `Licenses/`。第三方组件各自的许可优先适用。
+See the [release notes](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest) for changes and the supplied `SHA256SUMS.txt` to verify your download.
 
-Unreal® Engine 与 NVIDIA DLSS / Reflex 的商标和软件权利属于各自权利人。
+## Credits and licence
+
+Warfare Front is an independent historical game, not an official Armor Games or Warfare 1917 / Warfare 1944 release, and is not endorsed by their rightsholders. The game contains war violence and blood. Archival-style transition images are generated period reconstructions, not authentic historical photographs.
+
+Free personal play and redistribution of the complete, unmodified release with all notices are subject to `GAME-LICENSE.txt`, `THIRD-PARTY-NOTICES.md` and `Licenses/` inside the ZIP. Third-party components retain their respective licences. Unreal Engine and NVIDIA DLSS / Reflex belong to their respective rightsholders.
