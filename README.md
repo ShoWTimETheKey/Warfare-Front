@@ -4,7 +4,7 @@ A standalone First World War trench strategy game for Windows.
 
 **[Download the latest complete game](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest)**
 
-Under **Assets**, download `Warfare-Front-v35-Windows-x64.zip`. Extract the **entire ZIP**, then double-click **Play.cmd** or **WarfareFront.exe**. No Unreal Engine, Epic Games Launcher, development tools or game account are required. The game runs offline.
+Under **Assets**, download `Warfare-Front-v36-Windows-x64.zip`. Extract the **entire ZIP**, then double-click **Play.cmd** or **WarfareFront.exe**. No Unreal Engine, Epic Games Launcher, development tools or game account are required. The game runs offline.
 
 Do **not** download GitHub's automatic `Source code` archives to play. This repository distributes finished game packages, not the development project.
 
@@ -27,6 +27,8 @@ The package includes the required Microsoft x64 C++ runtime. Windows N may requi
 ## Updating and saves
 
 Each release ZIP is a complete game. Extract updates into a new folder; an older version is not needed. Campaign progress remains in `%LOCALAPPDATA%\Warfare1917\Progression-v13.json`; settings and logs are under `%LOCALAPPDATA%\WarfareFront\Saved\`.
+
+Use **Check for updates** in the game settings to compare your version with the latest public GitHub release and open its download page. This optional check requires internet access; it does not download or install anything automatically. Campaign archives display their difficulty and support confirmed individual or batch deletion.
 
 See the [release notes](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest) for changes and the supplied `SHA256SUMS.txt` to verify your download.
 
