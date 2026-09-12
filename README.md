@@ -2,18 +2,18 @@
 
 A standalone First World War trench strategy game for Windows.
 
-**[Download V37 — complete Windows game](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v37/Warfare-Front-v37-Windows-x64.zip)** · [Release notes](https://github.com/ShoWTimETheKey/Warfare-Front/releases/tag/v37) · [Latest release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest)
+**[Download V38 — complete Windows game](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v38/Warfare-Front-v38-Windows-x64.zip)** · [Release notes](https://github.com/ShoWTimETheKey/Warfare-Front/releases/tag/v38) · [Latest release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest)
 
 Extract the **entire ZIP** to a normal folder, then double-click **Play.cmd** or **WarfareFront.exe**. Keep all supplied folders together. No Unreal Engine, Epic Games Launcher, development tools or game account are required. The game runs offline.
 
 Do **not** download GitHub's automatic `Source code` archives to play. This repository distributes finished game packages, not the development project.
 
-## In V37
+## In V38
 
-- Reconnaissance reports visible enemy forces and improves indirect fire in the photographed sector, with practical guidance in the support hover panel.
-- Larger support missions, slightly shorter response times, rapid antitank support and more focused aircraft strafing.
-- Tanks manoeuvre around wrecks, enter along several routes, and carry varied period-format markings with revised paint and weathering. Tracks are tougher; close grenade attacks can occasionally damage running gear.
-- Slightly shorter battlefields, corrected later-operation commander portraits, clearer descriptions during cooldown, and smoother, more reliable loading and transitions.
+- Increased firearm accuracy: +20% for nonautomatic weapons and +35% for automatic weapons, including tank and aircraft machineguns. Cover, smoke, distance and suppression remain meaningful.
+- Extended assault contact and grenade throw ranges by 40%, with 30% faster prone deployment and rising.
+- Individually timed trench waiting gestures, preserved weapon grips, and distinct hot-core, ballistic dirt, fragment-trail and rolling-smoke explosion phases.
+- Next-operation units and support appear in the preceding mission's first victory report. Painted lock icons now remain opaque while their unwanted background is removed.
 
 ## Language
 
@@ -37,7 +37,7 @@ Each release ZIP is a complete game. Extract updates into a new folder; an older
 
 Use **Check for updates** in the game settings to compare your version with the latest public GitHub release and open its download page. This optional check requires internet access; it does not download or install anything automatically. Campaign archives display their difficulty and support confirmed individual or batch deletion.
 
-See the [V37 release notes](https://github.com/ShoWTimETheKey/Warfare-Front/releases/tag/v37) for changes and [SHA256SUMS.txt](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v37/SHA256SUMS.txt) to verify your download.
+See the [V38 release notes](https://github.com/ShoWTimETheKey/Warfare-Front/releases/tag/v38) for changes and [SHA256SUMS.txt](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v38/SHA256SUMS.txt) to verify your download.
 
 ## Credits and licence
 
