@@ -8,7 +8,7 @@ British and German campaigns.
 
 [Download the latest Windows release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest).
 
-1. Download **Warfare-Front-v83.2-Setup.exe** from the release assets and run it.
+1. Download **Warfare-Front-v83.9-Setup.exe** from the release assets and run it.
 2. Choose the installation location and optional desktop shortcut. Setup downloads
    the matching game data and verifies each file with SHA-256.
 3. Open **Start → Warfare Front → Play**.
@@ -65,4 +65,3 @@ authentic historical photographs. The game depicts war violence and blood.
 
 Consult the included game licence and component notices before redistributing
 the complete release.
-
