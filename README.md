@@ -1,4 +1,4 @@
-# Warfare Front
+﻿# Warfare Front
 
 A First World War trench strategy game for Windows. Lead infantry and armour,
 coordinate artillery and air support, and fight for ground and morale across
@@ -8,9 +8,9 @@ British and German campaigns.
 
 [Download the latest Windows release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest).
 
-1. Download **Warfare-Front-v84.4.2-Setup.exe** from the V84.4.2 release assets and run it.
+1. Download **Warfare-Front-v84.4.7-Setup.exe** from the V84.4.7 release assets and run it.
 2. Choose the installation location and optional desktop shortcut. Setup downloads
-   the matching V84.4.2 game data and verifies each file with SHA-256.
+   the matching V84.4.7 game data and verifies each file with SHA-256.
 3. Open **Start → Warfare Front → Play**.
 
 This release uses a Windows installer. Setup installs the complete game for your
@@ -20,7 +20,7 @@ the game runs offline. No earlier version, Epic Games Launcher, Unreal Editor,
 game account or archive tool is required.
 
 For an **offline installation**, download setup and **every matching data file**
-listed in the V84.4.2 release's `START-HERE.txt`. Keep the complete set together
+listed in the V84.4.7 release's `START-HERE.txt`. Keep the complete set together
 with its original filenames, then run setup. Do not mix release versions. GitHub's
 automatic **Source code** ZIP and TAR files are not the game.
 
@@ -33,30 +33,28 @@ Existing player records are retained.
 The interface starts in English and can be switched to **简体中文** in Settings.
 Battlefield console labels remain in English in either language.
 
-## V84.4.2 changes and review scope
+## V84.4.7 changes and review scope
 
-V84.4.2 updates the Windows launcher foreground handoff. Its desktop package
-passed static assembly and dependency checks. One final desktop `Play.exe`
-startup passed all focused startup checks in a 52.63-second review: the game
-reached the native foreground without forced activation by the test, covered
-the monitor with the taskbar behind it and exited normally. All **49 protected
-player files** were unchanged. This is one startup review, with no campaign
-acceptance or guarantee for every launch path.
+V84.4.7 adjusts trench exposure while firing and cover recovery during reloads,
+improves MP18 close-trench assault fire, corrects local movement and machine-gun
+assistant/reload placement, and fixes decoration-picker scrolling and after-action
+map sheets. Physical sight lines, ranges and fortification effects remain.
 
-The inherited V84.4 changes adjust support-fire damage to heavy armour, correct
-trench fire-lane reorientation, restore valid smoke, flash and debris effects,
-and fix special-honour presentation, infantry survivor conditions and a fade edge.
-Earlier **V84.4 controlled Shipping checks passed 162/162 checks**, with six FX
-captures and ten UI captures reviewed and fifty protected player files unchanged.
-Those earlier results were not newly repeated as V84.4.2 mechanism, FX or UI checks.
+The V84.4.7 desktop package passed static assembly and Windows dependency checks.
+The exact final Shipping executable passed **326 focused checks** in a
+**35.93-second controlled review**. Twelve actual 4K captures were reviewed and
+**52 protected player files** remained unchanged. These focused checks do not
+establish natural campaign balance, complete campaigns, all maps or all hardware.
+No fresh relocated desktop `Play.exe` startup, HDR image-quality review or
+independent generated-frame performance measurement was performed for V84.4.7.
 
-Earlier V84.4 core Frame Generation recovery after screenshot-tool focus loss
-passed in an exclusive-fullscreen 3840×2160 SDR run with DLSS Ray Reconstruction
-and FG X2. Its **complete screenshot-selection overlay test still failed** because
-overlay dismissal was not independently confirmed. A separate Editor screenshot
-attempt encountered a GPU timeout and an unresponsive window. These limits remain
-unresolved by the V84.4.2 startup review. HDR image quality and independent
-generated-frame performance were not measured. See the release notes for scope.
+Earlier V84.4 core FG X2 recovery after screenshot-tool focus loss passed in
+exclusive fullscreen at 3840x2160 SDR with DLSS Ray Reconstruction. Its complete
+screenshot-selection overlay test still failed because overlay dismissal was not
+independently confirmed. A separate Editor screenshot attempt encountered a GPU
+timeout and an unresponsive window. Those earlier limits were not retested here.
+Installer installation and uninstall verification is a separate delivery check.
+
 ## Graphics and compatibility
 
 Windows 11 x64 or fully updated Windows 10 22H2 x64, with a current graphics
@@ -83,8 +81,6 @@ Saves and preferences stay in your Windows user profile, outside the installatio
 - Achievements and account records: `%LOCALAPPDATA%\WarfareFront\Account\`
 - Retained national campaign records: `%LOCALAPPDATA%\WarfareFront\Campaigns\`
 - Preferences and diagnostics: `%LOCALAPPDATA%\WarfareFront\Saved\`
-- Achievements: `%LOCALAPPDATA%\WarfareFront\Account\`
-- Retained French/Russian campaign records: `%LOCALAPPDATA%\WarfareFront\Campaigns\`
 
 Uninstalling preserves saves and preferences. Install a newer release with its
 setup; the in-game update check opens the latest release page but does not install
