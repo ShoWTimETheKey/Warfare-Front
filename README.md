@@ -8,9 +8,9 @@ British and German campaigns.
 
 [Download the latest Windows release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest).
 
-1. Download **Warfare-Front-v84.4.7-Setup.exe** from the V84.4.7 release assets and run it.
+1. Download **Warfare-Front-v84.4.9-Setup.exe** from the V84.4.9 release assets and run it.
 2. Choose the installation location and optional desktop shortcut. Setup downloads
-   the matching V84.4.7 game data and verifies each file with SHA-256.
+   the matching V84.4.9 game data and verifies each file with SHA-256.
 3. Open **Start → Warfare Front → Play**.
 
 This release uses a Windows installer. Setup installs the complete game for your
@@ -20,7 +20,7 @@ the game runs offline. No earlier version, Epic Games Launcher, Unreal Editor,
 game account or archive tool is required.
 
 For an **offline installation**, download setup and **every matching data file**
-listed in the V84.4.7 release's `START-HERE.txt`. Keep the complete set together
+listed in the V84.4.9 release's `START-HERE.txt`. Keep the complete set together
 with its original filenames, then run setup. Do not mix release versions. GitHub's
 automatic **Source code** ZIP and TAR files are not the game.
 
@@ -33,27 +33,28 @@ Existing player records are retained.
 The interface starts in English and can be switched to **简体中文** in Settings.
 Battlefield console labels remain in English in either language.
 
-## V84.4.7 changes and review scope
+## V84.4.9 changes and review scope
 
-V84.4.7 adjusts trench exposure while firing and cover recovery during reloads,
-improves MP18 close-trench assault fire, corrects local movement and machine-gun
-assistant/reload placement, and fixes decoration-picker scrolling and after-action
-map sheets. Physical sight lines, ranges and fortification effects remain.
+V84.4.9 refines battlefield surfaces, broken timber and field structures. Mud,
+chalk, rubble and snow keep their surface detail as the camera moves. Tree roots
+meet the local ground; worn sandbags have softer compressed shapes. Shelters
+and supply positions fit the terrain. Shell scars follow the surface while
+avoiding water and steep edges.
 
-The V84.4.7 desktop package passed static assembly and Windows dependency checks.
-The exact final Shipping executable passed **326 focused checks** in a
-**35.93-second controlled review**. Twelve actual 4K captures were reviewed and
-**52 protected player files** remained unchanged. These focused checks do not
-establish natural campaign balance, complete campaigns, all maps or all hardware.
-No fresh relocated desktop `Play.exe` startup, HDR image-quality review or
-independent generated-frame performance measurement was performed for V84.4.7.
+This release includes V84.4.8's corrections to armour movement near trenches,
+mounted firing lines and passages between soldiers, together with scanned
+broken timber and its photographed bark and fractured ends.
 
-Earlier V84.4 core FG X2 recovery after screenshot-tool focus loss passed in
-exclusive fullscreen at 3840x2160 SDR with DLSS Ray Reconstruction. Its complete
-screenshot-selection overlay test still failed because overlay dismissal was not
-independently confirmed. A separate Editor screenshot attempt encountered a GPU
-timeout and an unresponsive window. Those earlier limits were not retested here.
-Installer installation and uninstall verification is a separate delivery check.
+The final V84.4.9 game package passed assembly and Windows dependency checks.
+The same Shipping executable passed **472 focused checks** across six British
+operations. Fourteen actual 4K captures were reviewed and **53 protected player
+files** remained unchanged. These checks cover revised surfaces, ground contact
+and field placement; they do not certify complete campaigns, every map, campaign
+balance or every hardware configuration.
+
+HDR image quality and screenshot-tool overlay behavior were not newly certified
+in this review. If screenshot selection remains active, cancel it and return to
+the game. Safe Mode disables NVIDIA features for a diagnostic launch.
 
 ## Graphics and compatibility
 
