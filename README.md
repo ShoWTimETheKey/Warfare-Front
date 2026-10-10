@@ -8,9 +8,9 @@ British and German campaigns.
 
 [Download the latest Windows release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest).
 
-1. Download **Warfare-Front-v84.4.13-Setup.exe** from the V84.4.13 release assets and run it.
+1. Download **Warfare-Front-v84.4.14-Setup.exe** from the V84.4.14 release assets and run it.
 2. Choose the installation location and optional desktop shortcut. Setup downloads
-   the matching V84.4.13 game data and verifies each file with SHA-256.
+   the matching V84.4.14 game data and verifies each file with SHA-256.
 3. Open **Start → Warfare Front → Play**.
 
 This release uses a Windows installer. Setup installs the complete game for your
@@ -20,7 +20,7 @@ the game runs offline. No earlier version, Epic Games Launcher, Unreal Editor,
 game account or archive tool is required.
 
 For an **offline installation**, download setup and **every matching data file**
-listed in the V84.4.13 release's `START-HERE.txt`. Keep the complete set together
+listed in the V84.4.14 release's `START-HERE.txt`. Keep the complete set together
 with its original filenames, then run setup. Do not mix release versions. GitHub's
 automatic **Source code** ZIP and TAR files are not the game.
 
@@ -33,15 +33,27 @@ Existing player records are retained.
 The interface starts in English and can be switched to **简体中文** in Settings.
 Battlefield console labels remain in English in either language.
 
-## V84.4.13 changes
+## V84.4.14 changes
 
-V84.4.13 improves infantry and armour movement around trenches, corrects model-specific armour preparation timers and makes medal and ribbon previews consistent. Armour machine-gun base accuracy is reduced by 25%; the close-range drill bonus is now 30%. Ordinary armour can be fully deselected, while Archive special attachments can be changed freely. Terrain panels now use the current operation maps, and researched armour technology artwork is easier to distinguish.
+New medal ribbons use woven fabric, raised edges and the physical texture
+of the established ribbon rack.
 
-This release also includes the intervening local updates to mine clearing, Archive opponents, armour durability, historical decorations, weathered sandbags, volumetric dust and gas, shell scars, casualty effects and battlefield audio. See ReleaseNotes.md for details.
+Cannon-equipped armour prioritises an attainable firing position against opposing
+armour. Nearby infantry no longer interrupts this manoeuvre; each machine gun
+retains its own target and firing arc.
 
-The final Shipping package passed 212 focused checks across 17 actual test trajectories. Eight 4K captures were reviewed. Protected player files remained unchanged. This focused review does not certify every campaign or hardware configuration.
+The Distinguished Service Cross now requires a victory on Memories of the Abyss
+or Returned to the Front with two enemy armoured vehicles destroyed by fire
+support in that battle. Each further qualifying victory adds a bar.
 
-Britain and Germany are playable. France and Russia remain **Not yet available / 暂未开放**. English and **简体中文** interfaces are included.
+From 3 June 1918, the Distinguished Flying Medal requires a victory on either
+of those difficulties with an enemy armoured vehicle destroyed by aircraft.
+Each further qualifying victory adds a bar. Existing medals and bars are retained.
+
+The Shipping build passed 251 focused checks, including 36 armour engagements.
+Six bilingual 4K Honours captures were reviewed. Protected player files remained
+unchanged. This focused review does not certify every campaign or hardware
+configuration.
 
 ## Graphics and compatibility
 
