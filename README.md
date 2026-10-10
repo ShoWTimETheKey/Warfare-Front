@@ -8,9 +8,9 @@ British and German campaigns.
 
 [Download the latest Windows release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest).
 
-1. Download **Warfare-Front-v84.4.9-Setup.exe** from the V84.4.9 release assets and run it.
+1. Download **Warfare-Front-v84.4.13-Setup.exe** from the V84.4.13 release assets and run it.
 2. Choose the installation location and optional desktop shortcut. Setup downloads
-   the matching V84.4.9 game data and verifies each file with SHA-256.
+   the matching V84.4.13 game data and verifies each file with SHA-256.
 3. Open **Start → Warfare Front → Play**.
 
 This release uses a Windows installer. Setup installs the complete game for your
@@ -20,7 +20,7 @@ the game runs offline. No earlier version, Epic Games Launcher, Unreal Editor,
 game account or archive tool is required.
 
 For an **offline installation**, download setup and **every matching data file**
-listed in the V84.4.9 release's `START-HERE.txt`. Keep the complete set together
+listed in the V84.4.13 release's `START-HERE.txt`. Keep the complete set together
 with its original filenames, then run setup. Do not mix release versions. GitHub's
 automatic **Source code** ZIP and TAR files are not the game.
 
@@ -33,28 +33,15 @@ Existing player records are retained.
 The interface starts in English and can be switched to **简体中文** in Settings.
 Battlefield console labels remain in English in either language.
 
-## V84.4.9 changes and review scope
+## V84.4.13 changes
 
-V84.4.9 refines battlefield surfaces, broken timber and field structures. Mud,
-chalk, rubble and snow keep their surface detail as the camera moves. Tree roots
-meet the local ground; worn sandbags have softer compressed shapes. Shelters
-and supply positions fit the terrain. Shell scars follow the surface while
-avoiding water and steep edges.
+V84.4.13 improves infantry and armour movement around trenches, corrects model-specific armour preparation timers and makes medal and ribbon previews consistent. Armour machine-gun base accuracy is reduced by 25%; the close-range drill bonus is now 30%. Ordinary armour can be fully deselected, while Archive special attachments can be changed freely. Terrain panels now use the current operation maps, and researched armour technology artwork is easier to distinguish.
 
-This release includes V84.4.8's corrections to armour movement near trenches,
-mounted firing lines and passages between soldiers, together with scanned
-broken timber and its photographed bark and fractured ends.
+This release also includes the intervening local updates to mine clearing, Archive opponents, armour durability, historical decorations, weathered sandbags, volumetric dust and gas, shell scars, casualty effects and battlefield audio. See ReleaseNotes.md for details.
 
-The final V84.4.9 game package passed assembly and Windows dependency checks.
-The same Shipping executable passed **472 focused checks** across six British
-operations. Fourteen actual 4K captures were reviewed and **53 protected player
-files** remained unchanged. These checks cover revised surfaces, ground contact
-and field placement; they do not certify complete campaigns, every map, campaign
-balance or every hardware configuration.
+The final Shipping package passed 212 focused checks across 17 actual test trajectories. Eight 4K captures were reviewed. Protected player files remained unchanged. This focused review does not certify every campaign or hardware configuration.
 
-HDR image quality and screenshot-tool overlay behavior were not newly certified
-in this review. If screenshot selection remains active, cancel it and return to
-the game. Safe Mode disables NVIDIA features for a diagnostic launch.
+Britain and Germany are playable. France and Russia remain **Not yet available / 暂未开放**. English and **简体中文** interfaces are included.
 
 ## Graphics and compatibility
 
