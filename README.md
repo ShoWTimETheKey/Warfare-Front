@@ -1,4 +1,4 @@
-﻿# Warfare Front
+# Warfare Front
 
 A First World War trench strategy game for Windows. Lead infantry and armour,
 coordinate artillery and air support, and fight for ground and morale across
@@ -8,9 +8,9 @@ British and German campaigns.
 
 [Download the latest Windows release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest).
 
-1. Download **Warfare-Front-v84.4.14-Setup.exe** from the V84.4.14 release assets and run it.
+1. Download **Warfare-Front-v85-Setup.exe** from the V85 release assets and run it.
 2. Choose the installation location and optional desktop shortcut. Setup downloads
-   the matching V84.4.14 game data and verifies each file with SHA-256.
+   the matching V85 game data and verifies each file with SHA-256.
 3. Open **Start → Warfare Front → Play**.
 
 This release uses a Windows installer. Setup installs the complete game for your
@@ -20,7 +20,7 @@ the game runs offline. No earlier version, Epic Games Launcher, Unreal Editor,
 game account or archive tool is required.
 
 For an **offline installation**, download setup and **every matching data file**
-listed in the V84.4.14 release's `START-HERE.txt`. Keep the complete set together
+listed in the V85 release's `START-HERE.txt`. Keep the complete set together
 with its original filenames, then run setup. Do not mix release versions. GitHub's
 automatic **Source code** ZIP and TAR files are not the game.
 
@@ -33,27 +33,14 @@ Existing player records are retained.
 The interface starts in English and can be switched to **简体中文** in Settings.
 Battlefield console labels remain in English in either language.
 
-## V84.4.14 changes
+## V85 changes
 
-New medal ribbons use woven fabric, raised edges and the physical texture
-of the established ribbon rack.
-
-Cannon-equipped armour prioritises an attainable firing position against opposing
-armour. Nearby infantry no longer interrupts this manoeuvre; each machine gun
-retains its own target and firing arc.
-
-The Distinguished Service Cross now requires a victory on Memories of the Abyss
-or Returned to the Front with two enemy armoured vehicles destroyed by fire
-support in that battle. Each further qualifying victory adds a bar.
-
-From 3 June 1918, the Distinguished Flying Medal requires a victory on either
-of those difficulties with an enemy armoured vehicle destroyed by aircraft.
-Each further qualifying victory adds a bar. Existing medals and bars are retained.
-
-The Shipping build passed 251 focused checks, including 36 armour engagements.
-Six bilingual 4K Honours captures were reviewed. Protected player files remained
-unchanged. This focused review does not certify every campaign or hardware
-configuration.
+Both armies have 25% more morale capacity in campaign operations and 50% more
+in Ultimate Archive replays. Replay returns retain the selected army and operation.
+Armour contact, blocked approaches and Archive preparation choices have been
+corrected. Historically sourced medal forms, centred repeat devices, toxic-gas
+density and Mark V* weathering have been refined. Focused Shipping checks used
+disposable profiles and preserved real player records.
 
 ## Graphics and compatibility
 
@@ -72,6 +59,9 @@ Low Spec still requires a working hardware DirectX 11 driver.
 Performance depends on hardware, resolution and driver. Windows N may require
 Microsoft's Media Feature Pack. This release is not a native macOS, Linux or
 ARM64 build.
+
+If the Windows taskbar remains visible after a fullscreen launch, click the game
+window to activate it.
 
 ## Saves, updates and uninstalling
 
