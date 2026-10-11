@@ -1,4 +1,4 @@
-# Warfare Front
+﻿# Warfare Front
 
 A First World War trench strategy game for Windows. Lead infantry and armour,
 coordinate artillery and air support, and fight for ground and morale across
@@ -8,9 +8,9 @@ British and German campaigns.
 
 [Download the latest Windows release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest).
 
-1. Download **Warfare-Front-v85-Setup.exe** from the V85 release assets and run it.
+1. Download **Warfare-Front-v86-Setup.exe** from the V86 release assets and run it.
 2. Choose the installation location and optional desktop shortcut. Setup downloads
-   the matching V85 game data and verifies each file with SHA-256.
+   the matching V86 game data and verifies each file with SHA-256.
 3. Open **Start → Warfare Front → Play**.
 
 This release uses a Windows installer. Setup installs the complete game for your
@@ -20,7 +20,7 @@ the game runs offline. No earlier version, Epic Games Launcher, Unreal Editor,
 game account or archive tool is required.
 
 For an **offline installation**, download setup and **every matching data file**
-listed in the V85 release's `START-HERE.txt`. Keep the complete set together
+listed in the V86 release's `START-HERE.txt`. Keep the complete set together
 with its original filenames, then run setup. Do not mix release versions. GitHub's
 automatic **Source code** ZIP and TAR files are not the game.
 
@@ -33,14 +33,19 @@ Existing player records are retained.
 The interface starts in English and can be switched to **简体中文** in Settings.
 Battlefield console labels remain in English in either language.
 
-## V85 changes
+## V86 changes
 
-Both armies have 25% more morale capacity in campaign operations and 50% more
-in Ultimate Archive replays. Replay returns retain the selected army and operation.
-Armour contact, blocked approaches and Archive preparation choices have been
-corrected. Historically sourced medal forms, centred repeat devices, toxic-gas
-density and Mark V* weathering have been refined. Focused Shipping checks used
-disposable profiles and preserved real player records.
+- Completed campaigns now open a detailed report covering the recorded battles,
+  both armies, unit losses, armour destruction and fire-support results. Earlier
+  saves retain their available totals without inventing missing battle records.
+- Corpse blood settles and dries without repeatedly restarting its flow as
+  nearby effects appear.
+- Improved armour movement through occupied trench areas.
+- The German creeping-barrage research photograph has been refined to match the
+  wear, tonal range and grain of the other unresearched technology illustrations.
+
+Focused checks passed for blood lifetime, campaign-report data and storage
+boundaries, and report navigation in an isolated test profile.
 
 ## Graphics and compatibility
 
