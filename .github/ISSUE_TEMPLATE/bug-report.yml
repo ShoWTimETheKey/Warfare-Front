@@ -1,0 +1,40 @@
+name: Game bug / 游戏问题
+description: Report a reproducible gameplay, display, sound or stability issue.
+title: "[Bug]: "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Game version / 游戏版本
+      placeholder: V86
+    validations:
+      required: true
+  - type: dropdown
+    id: launch
+    attributes:
+      label: Launch mode / 启动方式
+      options:
+        - Play (normal)
+        - Low Spec
+        - Safe Mode
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: System and graphics / 系统与显卡
+      description: Windows version, GPU, driver version, RAM, resolution and Windows display scaling; include HDR/DLSS/Frame Generation state if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and result / 复现步骤与结果
+      description: Include army, mission, difficulty, what happened and what you expected. Say whether it repeats after restarting.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots and relevant logs / 截图和相关日志
+      description: "Attach relevant files from %LOCALAPPDATA%\\WarfareFront\\Saved\\Logs\\ if available. If that folder is empty, describe the available diagnostics in Saved. Redact Windows usernames and personal paths before posting publicly. Do not upload your whole Account, Campaigns or user-profile folder."

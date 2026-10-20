@@ -1,0 +1,82 @@
+{
+  "tag": "v86",
+  "assets": [
+    {
+      "name": "Warfare-Front-v86-Data.7z.001",
+      "size": 1900000000,
+      "sha256": "b5f8f9094a069aa209f19e0e3888ca023ac937eaeb25db55706bdf6307573878",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Data.7z.001"
+    },
+    {
+      "name": "Warfare-Front-v86-Data.7z.002",
+      "size": 1900000000,
+      "sha256": "cd5f1cd032cbc8d44b59b6a63328b05156bf5aa255e7a0778c0663476b09f3aa",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Data.7z.002"
+    },
+    {
+      "name": "Warfare-Front-v86-Data.7z.003",
+      "size": 1900000000,
+      "sha256": "854a2637cb81d1663e7d01283f474d049731db1c667589f4fe9850f977f95690",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Data.7z.003"
+    },
+    {
+      "name": "Warfare-Front-v86-Data.7z.004",
+      "size": 1900000000,
+      "sha256": "9c519f6891db25baf7c939fa369f498911817035ad94655e6c764ac7b8976e72",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Data.7z.004"
+    },
+    {
+      "name": "Warfare-Front-v86-Data.7z.005",
+      "size": 1900000000,
+      "sha256": "d00d99edea8f92275e54556f5e79ebaa357cc7310308aeb6182385400d289f24",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Data.7z.005"
+    },
+    {
+      "name": "Warfare-Front-v86-Data.7z.006",
+      "size": 1900000000,
+      "sha256": "f941357ef35d923717e4211bbd540642a7b0ba399c392c5c1105c6ba2f490021",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Data.7z.006"
+    },
+    {
+      "name": "Warfare-Front-v86-Data.7z.007",
+      "size": 1900000000,
+      "sha256": "571f720aca2b399f1a8b26029233f504c06894f37a46d6bde1de0c287035d491",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Data.7z.007"
+    },
+    {
+      "name": "Warfare-Front-v86-Data.7z.008",
+      "size": 643971064,
+      "sha256": "b12f814becfbb217840d7465db85c080c6aed13ff63604a424af28857ec7aa40",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Data.7z.008"
+    },
+    {
+      "name": "Warfare-Front-v86-Setup.exe",
+      "size": 2841340,
+      "sha256": "69e7543c6359bc7874fb3666c176850d2c8f736ca24165f30b584a446619b6dc",
+      "url": "https://github.com/ShoWTimETheKey/Warfare-Front/releases/download/v86/Warfare-Front-v86-Setup.exe"
+    }
+  ],
+  "downloadBytes": 13943971064,
+  "installedBytes": 14968829789,
+  "recommendedFreeBytes": 35000000000,
+  "oldSingleDriveComponentSumBytes": 28912800853,
+  "historicalNotesSha256": {
+    "v86": "3050a7ec9806366f8c5ee676cd362b8cb02217a14385e9abf3dda63bfc1d73f1",
+    "v85": "5ba4d703d9190dd2754b5df6395e76444c817bfec6378f136337284579defc75",
+    "v84.4.14": "e3d7d3aeb7a9286e83649132fe1fc79f9186649f0a9b26d7ec32f356b4bada54",
+    "v84.4.13": "0e49753827ca540ef2e6883fb187f6a903905a34b54b9552b7648092c98ffa7c",
+    "v84.4.9": "1fa4b17a18c984ad228fb98212234c61ee14def6c814e84e912642c3dfe73b69",
+    "v84.4.7": "a7ec31238525d8cdfaa06a5980841cecd4f8328f5a2f87cc9ae111483005a543",
+    "v84.4.2": "4f6c2674d4be522e0329b1c50e103c96b625ef2dcc579ccae67f30e202bba712",
+    "v83.9": "bd63a0a389a16df494bff59828c57d1056bb7d7ff6d157eb8dc75a2b146ce61e",
+    "v83.2": "e906f634a1ac949ad1b139d1fe3d6d74164ab45edab483055c216bc32dc8f578",
+    "v53": "a5cf59c1833ddb8a05de6b76ef775c94acb51b9e27c121e6a1b35f89a59f3d62",
+    "v49": "f84887934779e2d47d2f0cc1548fd61ef4765db53b8c58cffc57631d37de2de8",
+    "v43": "03f2b75952d2b71b777a2f6c51c7809d6d0a447965dfcb7192472da2ebc25423",
+    "v38": "15de1db3dbc9b7cfaba3b8d5962a64577f149e97b23c3820369ea1c779ef63be",
+    "v37": "5b506d9b5bf27d025d01e78792ec22681890c30adb920f03862464a08f2a219a",
+    "v36": "18109d465d4cdd1d88d2545cff3434a14915a49a7afb68c50c296a3e2448b9b8",
+    "v35": "a861def148e61f420875cf0029a0c29e2156f10c96dcd4e771ba30ccf978ae78",
+    "v33.1": "48f9017ec755586be199de8982872dc906f6bbd29731248b46d6f8c10efbe300"
+  }
+}

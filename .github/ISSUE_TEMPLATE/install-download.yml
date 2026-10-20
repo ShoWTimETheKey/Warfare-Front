@@ -1,0 +1,34 @@
+name: Download or installation / 下载或安装问题
+description: Missing data, hash mismatch, blocked startup or installer errors.
+title: "[Install]: "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Release tag and installer filename / 发行版本与安装器名称
+      placeholder: v86 — Warfare-Front-v86-Setup.exe
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation method / 安装方式
+      options:
+        - Online installation
+        - Complete offline set
+        - Partial offline set
+        - Updating an existing installation
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Exact message and steps / 完整提示与操作步骤
+      description: Include Windows version, download URL, installer message and available space on the download and installation drives. Do not disable Windows protection to collect this information.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: File verification / 文件校验
+      description: "If available, paste the installer SHA-256 from Get-FileHash and name any missing data volumes. Do not paste credentials or private account information. Redact personal paths in screenshots or logs."

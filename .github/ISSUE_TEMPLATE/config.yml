@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Latest release / 最新发行版
+    url: https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest
+    about: Use the complete installer and matching data volumes from one release.

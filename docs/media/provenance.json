@@ -1,0 +1,55 @@
+{
+  "release": "v86",
+  "captureDate": "2026-10-11",
+  "scope": "Actual Shipping renderer captures from focused validation. Images are not generated concept art.",
+  "images": [
+    {
+      "sourceCapture": "blood-sequence-0.png",
+      "sourceSha256": "38310cacf8324fd55989da438244cd82acdda8add744951428ccf7fba8ee8829",
+      "sourceSize": [
+        3840,
+        2160
+      ],
+      "publicImage": "battlefield.webp",
+      "publicSize": [
+        1920,
+        1080
+      ],
+      "publicBytes": 531166,
+      "description": "V86 battlefield interface during a focused validation scene.",
+      "processing": "Only proportional resize and WebP encoding; no scene, lighting, colour or HUD edits."
+    },
+    {
+      "sourceCapture": "german-barrage-archive-en.png",
+      "sourceSha256": "9b88ef822db21f413ecfd3736c708e5948ec5a6aa9b3fab1fc5a0b2c38cd1e01",
+      "sourceSize": [
+        3840,
+        2160
+      ],
+      "publicImage": "research.webp",
+      "publicSize": [
+        1920,
+        1080
+      ],
+      "publicBytes": 532490,
+      "description": "V86 German research interface.",
+      "processing": "Only proportional resize and WebP encoding; no scene, lighting, colour or HUD edits."
+    },
+    {
+      "sourceCapture": "campaign-report-en-0.png",
+      "sourceSha256": "1917104212ccbc35c65b124f7a5cec62455208b0e396d1f678942087d01e7585",
+      "sourceSize": [
+        3840,
+        2160
+      ],
+      "publicImage": "campaign-report.webp",
+      "publicSize": [
+        1920,
+        1080
+      ],
+      "publicBytes": 143778,
+      "description": "V86 campaign report layout rendered with synthetic review data; not a natural player campaign result.",
+      "processing": "Only proportional resize and WebP encoding; no scene, lighting, colour or HUD edits."
+    }
+  ]
+}
