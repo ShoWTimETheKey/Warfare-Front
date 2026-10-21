@@ -6,7 +6,7 @@ Open **Start → Warfare Front → Play**. Low Spec, Safe Mode and the uninstall
 
 See `ReleaseNotes.txt` in the installation folder for this version's changes. This is the same document supplied as `ReleaseNotes.md` in the GitHub release: Setup intentionally copies that Markdown attachment to the installed `.txt` filename. The two names refer to the same notes.
 
-This support repository does not publish the game's source. GitHub's automatic Source code ZIP and TAR archives are not playable builds.
+Original game code is now available under the repository's scoped MIT licence. GitHub's automatic Source code archives omit the engine, proprietary dependencies and complete game content; they are not playable builds.
 
 ## Campaigns and language
 
@@ -89,7 +89,7 @@ Relevant diagnostic logs are under `%LOCALAPPDATA%\WarfareFront\Saved\` (usually
 
 Warfare Front is an independent historical game, not an official Armor Games release. Archival-style illustrations are generated reconstructions, not authentic historical photographs. The game depicts war violence and blood.
 
-Consult the [game licence](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE), `THIRD-PARTY-NOTICES.md` and the bundled component licences before redistributing the complete release. The installed game includes the licence as `GAME-LICENSE.txt`. Source code is not published or offered under an open-source licence.
+The downloadable V86 binary keeps its [original binary game licence](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSES/LicenseRef-WarfareFront-Binary-V86.txt), installed as `GAME-LICENSE.txt`, together with `THIRD-PARTY-NOTICES.md` and component licences. Newly published original source code is covered by [MIT](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE) and [LICENSING.md](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSING.md). This does not relicense Unreal Engine, NVIDIA components, third-party materials or the existing release package.
 
 ---
 
@@ -101,7 +101,7 @@ Consult the [game licence](https://github.com/ShoWTimETheKey/Warfare-Front/blob/
 
 本版更新见安装目录中的 `ReleaseNotes.txt`。它与 GitHub 发行附件 `ReleaseNotes.md` 是同一份文档：安装程序会将该 Markdown 附件复制为 `.txt` 文件，两个文件名并不矛盾。
 
-发行与支持仓库未公开游戏源码。GitHub 自动提供的 Source code ZIP 和 TAR 压缩包不是可玩版本。
+原创游戏代码现已在仓库列明的范围内采用 MIT 许可公开。GitHub 自动提供的 Source code 压缩包不包含引擎、专有依赖及完整游戏内容，不是可玩版本。
 
 ## 战役与语言
 
@@ -184,4 +184,4 @@ GitHub 发行页面除安装程序及数据卷外，提供 `START-HERE.txt`、`R
 
 Warfare Front 是独立历史题材游戏，并非 Armor Games 官方发行版。仿古插画属于生成重构，不是真实历史照片。本作包含战争暴力与血液表现。
 
-转发完整游戏前，请查阅[游戏许可](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE)、`THIRD-PARTY-NOTICES.md` 及随包组件许可。安装目录中该许可的文件名为 `GAME-LICENSE.txt`。游戏源码未公开，也未授予开源许可。
+V86 二进制发行包继续适用其[原有二进制游戏许可](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSES/LicenseRef-WarfareFront-Binary-V86.txt)（安装目录内为 `GAME-LICENSE.txt`）、`THIRD-PARTY-NOTICES.md` 及组件许可。新公开的原创源码适用 [MIT](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE) 和 [LICENSING.md](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSING.md) 列明的范围；这不重新许可 Unreal Engine、NVIDIA 组件、第三方素材或既有发行包。

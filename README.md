@@ -12,7 +12,11 @@ Actual V86 Shipping capture from a focused validation scene, not a large-scale b
 
 ## About this repository
 
-This is the game's release and support repository. The game source is not published here. GitHub's automatic **Source code** ZIP and TAR archives contain repository files, not the playable game.
+Original Warfare Front game code and release-maintenance tools are published here under the [MIT licence](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE), within the scope explained in [LICENSING.md](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSING.md). Browse [Source](https://github.com/ShoWTimETheKey/Warfare-Front/tree/main/Source) and the [source manifest](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/source-manifest.json) for the actual published files.
+
+This is a development source snapshot, not the frozen input of the V86 binary release. Unreal Engine, proprietary NVIDIA plugins/SDKs and the complete game art, audio and cooked content are omitted. Follow [the build instructions](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/docs/BUILDING.md) for dependencies and validation limits.
+
+GitHub's automatic **Source code** ZIP and TAR archives contain the public source snapshot, not a ready-to-play game. Players should download the installer from Releases.
 
 [Get the latest Windows release](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest) · [Version history](CHANGELOG.md) · [Report a problem](https://github.com/ShoWTimETheKey/Warfare-Front/issues/new/choose)
 
@@ -107,4 +111,4 @@ The installed `ReleaseNotes.txt` is deliberately copied from the release attachm
 
 Warfare Front is an independent historical game, not an official Armor Games release. Archival-style illustrations are generated reconstructions, not authentic historical photographs. The game depicts war violence and blood.
 
-Consult the [game licence](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE), `THIRD-PARTY-NOTICES.md` and the bundled component licences before redistributing the complete release. The installed game includes the licence as `GAME-LICENSE.txt`. Source code is not published or offered under an open-source licence.
+The downloadable V86 binary keeps its [original binary game licence](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSES/LicenseRef-WarfareFront-Binary-V86.txt), installed as `GAME-LICENSE.txt`, together with `THIRD-PARTY-NOTICES.md` and component licences. Newly published original source code is covered by [MIT](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE) and [LICENSING.md](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSING.md). This does not relicense Unreal Engine, NVIDIA components, third-party materials or the existing release package.

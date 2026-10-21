@@ -1,0 +1,15 @@
+// V66 painted stores lock. Genuine alpha supplies coverage independently of RGB.
+#include "/Engine/Public/Platform.ush"
+Texture2D LockAtlas; SamplerState LockAtlasSampler;
+
+void Main(in float2 TextureCoordinate:TEXCOORD0,out float4 OutColor:SV_Target0)
+{
+    float4 pixel=LockAtlas.Sample(LockAtlasSampler,TextureCoordinate);
+    float3 color=pixel.rgb;
+    // The native HUD layer follows the same sRGB-code convention as the flag
+    // shader. Sampling decodes the atlas; encode once before UI compositing.
+    float3 encoded=lerp(color*12.92,1.055*pow(max(color,0),1.0/2.4)-.055,step(.0031308,color));
+    // Normalize near-opaque generated metal (252..255) while preserving the
+    // empty shackle and exterior, with antialiasing along the real outline.
+    OutColor=float4(saturate(encoded),smoothstep(.05,.95,pixel.a));
+}

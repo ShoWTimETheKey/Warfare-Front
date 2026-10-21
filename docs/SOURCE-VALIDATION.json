@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "date": "2026-10-21",
+  "sourceManifestSha256": "a97fdada3844843a7dfab5be885b37dd99c0fa2019109b9a31c2942315410310",
+  "sourceFiles": 729,
+  "manifestFiles": 742,
+  "unreal": {
+    "target": "WarfareFrontEditor Win64 Development",
+    "engine": "5.8.2 CL56702186",
+    "msvc": "14.50.35739",
+    "windowsSdk": "10.0.26100.0",
+    "result": "Succeeded",
+    "actions": 201,
+    "elapsedSeconds": 168.65,
+    "exactManifestInputsCompared": 738,
+    "descriptorDifference": "Only private AdditionalPluginDirectories dependency search path; not published.",
+    "warnings": "Existing numeric-conversion and UDT calling-convention warnings remain.",
+    "cookRun": false,
+    "shippingBuilt": false,
+    "gameRun": false
+  },
+  "nativeLocal": {
+    "compiler": "MSVC 19.51.36260.0",
+    "configuration": "Release",
+    "testsPassed": 2,
+    "orderChecks": 1872,
+    "triangleChecks": 224,
+    "scope": "Standard-C++ rule and scene fixtures, not gameplay or rendering acceptance."
+  },
+  "limitations": [
+    "Not the frozen source used to produce V86.",
+    "Unreal Engine, proprietary SDKs/plugins and complete game assets are not included.",
+    "Tripo-derived geometry/contact data omitted; optional loaders explicitly unavailable.",
+    "No complete Cook/Shipping or visual runtime acceptance."
+  ]
+}

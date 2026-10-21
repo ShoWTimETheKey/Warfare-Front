@@ -1,9 +1,12 @@
 # Release maintenance
 
-This is the binary game's distribution and support repository. The game source,
-Unreal project and proprietary assets are not published here. The tools in this
-repository regenerate documentation; they do not rebuild the game or establish
-reproducible binary provenance.
+This repository contains reviewed original game source alongside the binary
+game's distribution and support files. The included source paths and licence
+exceptions are recorded in `source-manifest.json` and [LICENSING.md](../LICENSING.md).
+Unreal Engine, proprietary plugins and the complete game content are omitted.
+The documentation tools regenerate release guidance; they do not establish
+that the existing V86 binary can be reproduced from this development snapshot.
+See [BUILDING.md](BUILDING.md) for dependencies and compile-validation limits.
 
 ## Documentation source
 
@@ -66,16 +69,16 @@ guarantee that SmartScreen will never display a reputation warning.
 
 ## Immutable releases
 
-Enabling repository immutable releases affects future publications; it does not
-retroactively lock V86. This maintenance change does not enable that setting or
-delete any draft or historical release. The setting requires an authorized
-administrator operation.
+The repository is configured for immutable future releases. That setting does
+not retroactively lock V86. Source publication does not change existing release
+assets, tags or the immutability setting. Keep those operations separate from a
+source commit.
 
-Once enabled, create a draft, upload **all** installers, data volumes, final
+For a new binary release, create a draft, upload **all** installers, data volumes, final
 checksums and documents, verify the complete set, then publish. Published assets
 and the release tag are locked. GitHub's resulting attestation binds that
-release snapshot; it does not prove that this closed-source game was rebuilt
-from public source, nor that its binaries are harmless.
+release snapshot; it does not prove that an existing binary was reproducibly
+built from the published source snapshot, nor that its binaries are harmless.
 
 - [Enable release immutability](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/prevent-release-changes)
 - [Immutable release behaviour](https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases)

@@ -1,0 +1,88 @@
+// Cloth absorption after discrete oblique liquid impacts. Never reveals bottom-up.
+#include "/Engine/Public/Platform.ush"
+Texture2D FlagCloth; SamplerState FlagClothSampler;
+Texture2D Absorption; SamplerState AbsorptionSampler;
+Texture2D Spill; SamplerState SpillSampler;
+float4 StainState; // displayed, target, previous losses; arrival age
+float ClothTime, SplatterSeed;
+float Hash21(float2 p) { return frac(sin(dot(p,float2(127.1,311.7)))*43758.5453); }
+float Splat(float2 uv,float2 centre,float radius,float spin,float tile)
+{
+    float2 d=(uv-centre)*float2(1,.68);
+    float sn=sin(spin),cs=cos(spin);
+    float2 q=float2(cs*d.x-sn*d.y,sn*d.x+cs*d.y)/max(radius,.001)+.5;
+    float bounded=step(0,q.x)*step(q.x,1)*step(0,q.y)*step(q.y,1);
+    float2 atlas=(float2(fmod(tile,2),floor(tile/2))+clamp(q,.003,.997))*.5;
+    return Spill.SampleLevel(SpillSampler,atlas,0).r*bounded;
+}
+void Main(in float2 TextureCoordinate:TEXCOORD0,out float4 OutColor:SV_Target0)
+{
+    float2 uv=TextureCoordinate;
+    uv.y+=sin(uv.x*11-ClothTime*.85)*.005*uv.x;uv=clamp(uv,.001,.999);
+    float3 cloth=FlagCloth.Sample(FlagClothSampler,uv).rgb;
+    float fibres=Absorption.Sample(AbsorptionSampler,frac(uv*float2(1.13,1.17)+SplatterSeed*.013)).r;
+    float losses=max(0,StainState.x),age=max(0,StainState.w);
+    float cover=0,wetCover=0;
+    [unroll] for(int i=0;i<14;++i)
+    {
+        float2 salt=float2(i*5.17+SplatterSeed,i*1.73+SplatterSeed*.61);
+        float r=Hash21(salt),r2=Hash21(salt+31.1),r3=Hash21(salt+79.7);
+        float2 centre=float2(.04+.92*r,.06+.88*r2);
+        // A recognizable flag survives the opening exchange. Larger stains
+        // accumulate as the battle progresses; no every-casualty full reset.
+        float threshold=3+i*(5.5+i*.44);
+        float deposited=saturate((losses-threshold)/7);
+        float old=saturate((StainState.z-threshold)/7);
+        float target=saturate((StainState.y-threshold)/7);
+        float fresh=saturate(target-old);
+        float radius=.38+.27*r3;
+        float tile=fmod(i+floor(SplatterSeed),4);
+        float stamp=Splat(uv,centre,radius*(.82+.18*deposited),r*6.283,tile);
+        // Dense central deposits retain the weave; a thin capillary halo
+        // darkens cloth beyond the pool. Independent stains combine by union.
+        float soaked=smoothstep(.024,.48,stamp)*deposited;
+        float density=soaked*(.94+.06*fibres);
+        cover=1-(1-cover)*(1-density);
+        if(fresh>.001 && age<1.7)
+        {
+            float travel=saturate((age-.012)/.22);
+            float2 direction=float2(cos(r*6.283),sin(r*6.283)/.68);
+            float2 impactCentre=centre-direction*.055*(1-travel);
+            float impact=Splat(uv,impactCentre,radius*(.25+.75*sqrt(travel)),r*6.283,tile);
+            float wet=smoothstep(.025,.42,impact)*fresh*smoothstep(0,.022,age);
+            cover=1-(1-cover)*(1-wet*(1-smoothstep(.19,.48,age)));
+            wetCover=max(wetCover,wet*(1-smoothstep(.3,1.7,age)));
+        }
+    }
+    float luma=dot(cloth,float3(.2126,.7152,.0722));
+    float fold=.94+.045*sin(uv.x*19+uv.y*4)+.018*sin(uv.x*43-uv.y*7);
+    float grit=Hash21(floor(uv*float2(390,260))+SplatterSeed);
+    float soil=saturate((.40-fibres)*1.8+.11*sin(uv.x*39+uv.y*24)+.10*grit);
+    float weave=.77+.18*fibres+.05*sin(uv.x*715)*sin(uv.y*479);
+    float3 dry=float3(.027,.0017,.0021)*weave*(.78+.28*luma);
+    float3 wet=float3(.049,.0028,.0033)*weave*(.77+.24*luma);
+    float3 mud=float3(.026,.019,.011)*(.65+.55*grit);
+    float3 blood=lerp(lerp(dry,wet,wetCover*.68),mud,soil*.40);
+    float3 color=lerp(cloth*.83,blood,saturate(cover*.99))*fold;
+    // Sparse, irregular bullet punctures and thread-frayed outer hems.
+    float2 grid=float2(5,3),cell=floor(uv*grid);
+    float h=Hash21(cell+13.7+SplatterSeed),j=Hash21(cell+39.1+SplatterSeed);
+    float2 centre=(cell+float2(.18+.64*h,.18+.64*j))/grid;
+    float growth=saturate((losses-(38+Hash21(cell+81.4+SplatterSeed)*170))/55);
+    float2 delta=(uv-centre)*float2(1,.67);
+    float angle=atan2(delta.y,delta.x);
+    float irregular=1+.14*sin(angle*3+h*23)+.09*sin(angle*7+j*31);
+    float signedDistance=length(delta)-growth*(.008+.013*j)*irregular;
+    float aa=max(fwidth(signedDistance),.0007);
+    float alpha=lerp(1,smoothstep(-aa,aa,signedDistance),smoothstep(0,.04,growth));
+    float severity=saturate((losses-40)/155);
+    float fringe=severity*(.019+.034*pow(.5+.5*sin(uv.y*37+SplatterSeed+.7*sin(uv.y*93)),3));
+    float edgeDistance=(1-uv.x)-fringe,edgeAA=max(fwidth(edgeDistance),.0007);
+    alpha*=smoothstep(-edgeAA,edgeAA,edgeDistance);
+    float hem=severity*.009*(.3+.7*Hash21(floor(uv*float2(97,1))+SplatterSeed));
+    alpha*=smoothstep(-edgeAA,edgeAA,min(uv.y,1-uv.y)-hem*uv.x);
+    float tornRim=(1-smoothstep(.0008,.0048,abs(signedDistance)))*smoothstep(0,.04,growth);
+    color=lerp(color,float3(.037,.026,.014),tornRim*.69);
+    float3 encoded=lerp(color*12.92,1.055*pow(max(color,0),1.0/2.4)-.055,step(.0031308,color));
+    OutColor=float4(saturate(encoded),saturate(alpha));
+}

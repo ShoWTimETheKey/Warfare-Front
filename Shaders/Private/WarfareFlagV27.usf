@@ -1,0 +1,65 @@
+// Exact SimpleElementVS TEXCOORD semantics. Straight sRGB color plus coverage.
+#include "/Engine/Public/Platform.ush"
+Texture2D FlagCloth; SamplerState FlagClothSampler;
+Texture2D Absorption; SamplerState AbsorptionSampler;
+float4 StainState; // displayed losses, target, previous target, impact age
+float ClothTime;
+float Hash21(float2 p) { return frac(sin(dot(p,float2(127.1,311.7)))*43758.5453); }
+float Coverage(float n,float m,float2 p)
+{
+    float burden=.94*(1-exp(-max(n,0)/110.0));
+    float priority=saturate(m*.88+(1-p.y)*.10);
+    return (1-smoothstep(burden-.034,burden+.034,priority))*smoothstep(0,.65,n);
+}
+void Main(in float2 TextureCoordinate:TEXCOORD0,out float4 OutColor:SV_Target0)
+{
+    float2 uv=TextureCoordinate;uv.y+=sin(uv.x*11-ClothTime*.85)*.005*uv.x;
+    uv=clamp(uv,.001,.999);
+    float3 cloth=FlagCloth.Sample(FlagClothSampler,uv).rgb;
+    float mask=Absorption.Sample(AbsorptionSampler,uv).r;
+    float losses=max(0,StainState.x),age=max(0,StainState.w);
+    float cover=Coverage(losses,mask,uv),target=Coverage(StainState.y,mask,uv);
+    float fresh=saturate(target-Coverage(StainState.z,mask,uv));
+    float2 source=float2(.2+.6*frac(StainState.y*.618034),.20);
+    float radius=length((uv-source)*float2(1,.70));
+    float contact=saturate(1-abs(radius-(age-.035)*3.4)*13)*step(.035,age)*(1-smoothstep(.22,.48,age));
+    float bead=saturate(1-abs(uv.y-(age*1.8-.08))*15)*(1-smoothstep(.48,.80,age));
+    float fibres=.65+.35*sin(uv.x*171+mask*13)*sin(uv.y*133);
+    float arrival=fresh*saturate(contact+bead*.68)*fibres;
+    float damp=fresh*(1-smoothstep(.16,1.35,age))*cover;
+    float luma=dot(cloth,float3(.2126,.7152,.0722));
+    float fold=.93+.045*sin(uv.x*19+uv.y*4)+.018*sin(uv.x*43-uv.y*7);
+    float grit=Hash21(floor(uv*float2(310,205)));
+    float soil=saturate((.40-mask)*1.8+.22*sin(uv.x*39+uv.y*24)+.12*grit);
+    float3 dry=float3(.028,.0020,.0025)*(.73+.35*luma+.12*mask);
+    float3 wet=float3(.054,.0040,.0046)*(.74+.29*luma);
+    float3 mud=float3(.029,.022,.014)*(.65+.55*grit);
+    float3 blood=lerp(lerp(dry,wet,saturate(damp*.6+arrival*.65)),mud,soil*.53);
+    float3 color=lerp(cloth*.83,blood,saturate(cover*.985))*fold;
+    color=lerp(color,lerp(wet,mud,soil*.42),saturate(arrival*.55));
+    // Damage is anchored to the same cloth coordinate, with deterministic hole
+    // positions. Increasing losses only enlarges existing holes/adds new ones.
+    float2 grid=float2(7,4),cell=floor(uv*grid);
+    float h=Hash21(cell+13.7),j=Hash21(cell+39.1);
+    float2 centre=(cell+float2(.18+.64*h,.18+.64*j))/grid;
+    float growth=saturate((losses-(10+Hash21(cell+81.4)*105))/34);
+    float2 delta=(uv-centre)*float2(1,.67);
+    float angle=atan2(delta.y,delta.x);
+    float irregular=1+.08*sin(angle*3+h*23)+.055*sin(angle*7+j*31);
+    float holeRadius=growth*(.010+.012*j)*irregular;
+    float signedDistance=length(delta)-holeRadius;
+    float aa=max(fwidth(signedDistance),.0007);
+    float alpha=lerp(1,smoothstep(-aa,aa,signedDistance),smoothstep(0,.04,growth));
+    float severity=saturate((losses-18)/115);
+    float fringe=severity*(.019+.034*pow(.5+.5*sin(uv.y*37+.7*sin(uv.y*93)),3));
+    float edgeDistance=(1-uv.x)-fringe;
+    float edgeAA=max(fwidth(edgeDistance),.0007);
+    alpha*=smoothstep(-edgeAA,edgeAA,edgeDistance);
+    // Small ragged top/bottom fibres retain the hoist seam and readable emblem.
+    float hem=severity*.009*(.3+.7*Hash21(floor(uv*float2(97,1))));
+    alpha*=smoothstep(-edgeAA,edgeAA,min(uv.y,1-uv.y)-hem*uv.x);
+    float tornRim=(1-smoothstep(.0008,.0048,abs(signedDistance)))*smoothstep(0,.04,growth);
+    color=lerp(color,float3(.037,.026,.014),tornRim*.69);
+    float3 encoded=lerp(color*12.92,1.055*pow(max(color,0),1.0/2.4)-.055,step(.0031308,color));
+    OutColor=float4(saturate(encoded),saturate(alpha));
+}

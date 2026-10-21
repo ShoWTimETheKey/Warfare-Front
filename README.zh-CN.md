@@ -12,7 +12,11 @@ V86 Shipping 定向检查场景实机画面，并非大规模交战宣传图或�
 
 ## 仓库用途
 
-本仓库用于游戏发行与问题反馈，未公开游戏源码。GitHub 自动提供的 **Source code** ZIP 和 TAR 压缩包仅包含仓库文件，不能用来游玩。
+本仓库公开 Warfare Front 的原创游戏代码与发行维护工具，在 [LICENSING.md](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSING.md) 列明的范围内采用 [MIT 许可](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE)。实际公开的文件见 [Source](https://github.com/ShoWTimETheKey/Warfare-Front/tree/main/Source) 和[源码清单](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/source-manifest.json)。
+
+这是一份开发中源码快照，并非 V86 二进制发行版的冻结构建输入。仓库不包含 Unreal Engine 本体、NVIDIA 专有插件／SDK，以及完整美术、音频和烘焙内容。依赖获取方式与验证范围见[构建说明](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/docs/BUILDING.md)。
+
+GitHub 自动提供的 **Source code** ZIP 和 TAR 压缩包包含公开源码快照，不能直接游玩；玩家请从 Releases 下载安装程序。
 
 [下载最新 Windows 版](https://github.com/ShoWTimETheKey/Warfare-Front/releases/latest) · [历版更新记录](CHANGELOG.md) · [反馈问题](https://github.com/ShoWTimETheKey/Warfare-Front/issues/new/choose)
 
@@ -107,4 +111,4 @@ GitHub 发行页面除安装程序及数据卷外，提供 `START-HERE.txt`、`R
 
 Warfare Front 是独立历史题材游戏，并非 Armor Games 官方发行版。仿古插画属于生成重构，不是真实历史照片。本作包含战争暴力与血液表现。
 
-转发完整游戏前，请查阅[游戏许可](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE)、`THIRD-PARTY-NOTICES.md` 及随包组件许可。安装目录中该许可的文件名为 `GAME-LICENSE.txt`。游戏源码未公开，也未授予开源许可。
+V86 二进制发行包继续适用其[原有二进制游戏许可](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSES/LicenseRef-WarfareFront-Binary-V86.txt)（安装目录内为 `GAME-LICENSE.txt`）、`THIRD-PARTY-NOTICES.md` 及组件许可。新公开的原创源码适用 [MIT](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSE) 和 [LICENSING.md](https://github.com/ShoWTimETheKey/Warfare-Front/blob/main/LICENSING.md) 列明的范围；这不重新许可 Unreal Engine、NVIDIA 组件、第三方素材或既有发行包。

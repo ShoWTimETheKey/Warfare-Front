@@ -1,0 +1,13 @@
+// Original synthetic short urgent EN/DE field calls; no voice clone. See ArtSource/Audio/V26/audio-provenance.json
+{TEXT("VO_V26_UK_ArriveTrench_01"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::ArriveTrench),0,VoiceSpeech,TEXT("qwen-v26:7926a943208e396a8f1c08f4")},
+{TEXT("VO_V26_UK_ArriveTrench_02"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::ArriveTrench),0,VoiceSpeech,TEXT("qwen-v26:2af1cff54275422c9143af6d")},
+{TEXT("VO_V26_UK_ArriveTrench_03"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::ArriveTrench),0,VoiceSpeech,TEXT("qwen-v26:d14e6b680a046733f0f740b4")},
+{TEXT("VO_V26_UK_Advance_01"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::Advance) | VEvent(EFrontlineVoiceEvent::PassFullTrench),0,VoiceSpeech,TEXT("qwen-v26:5f332399c60b11bb07b84b2b")},
+{TEXT("VO_V26_UK_Advance_02"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::Advance) | VEvent(EFrontlineVoiceEvent::PassFullTrench),0,VoiceSpeech,TEXT("qwen-v26:cf0a50c9a71777ec07b60734")},
+{TEXT("VO_V26_UK_Contact_01"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::Contact),0,VoiceSpeech,TEXT("qwen-v26:6a1576a970cb50a332705d17")},
+{TEXT("VO_V26_DE_ArriveTrench_01"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::ArriveTrench),1,VoiceSpeech,TEXT("qwen-v26:56953af11a4486f0ff1ddb5c")},
+{TEXT("VO_V26_DE_ArriveTrench_02"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::ArriveTrench),1,VoiceSpeech,TEXT("qwen-v26:2c5ca913c0a6bb7e7ca60cb4")},
+{TEXT("VO_V26_DE_ArriveTrench_03"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::ArriveTrench),1,VoiceSpeech,TEXT("qwen-v26:1108a814fabe2cfa8d7cef10")},
+{TEXT("VO_V26_DE_Advance_01"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::Advance) | VEvent(EFrontlineVoiceEvent::PassFullTrench),1,VoiceSpeech,TEXT("qwen-v26:03772644ea0e519e040bec16")},
+{TEXT("VO_V26_DE_Advance_02"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::Advance) | VEvent(EFrontlineVoiceEvent::PassFullTrench),1,VoiceSpeech,TEXT("qwen-v26:11dd2334193101d811ac983f")},
+{TEXT("VO_V26_DE_Contact_01"),TEXT("/Game/Warfare/Audio/V26"),VEvent(EFrontlineVoiceEvent::Contact),1,VoiceSpeech,TEXT("qwen-v26:e5b74abb36db82086349c059")},

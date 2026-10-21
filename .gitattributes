@@ -4,3 +4,4 @@
 *.webp binary
 *.exe binary
 *.7z.* binary
+LICENSES/** -text

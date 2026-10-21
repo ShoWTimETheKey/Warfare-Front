@@ -6,7 +6,7 @@ import hashlib
 import importlib.util
 import io
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import tempfile
 import unittest
 
@@ -109,8 +109,60 @@ class ReleaseDocuments(unittest.TestCase):
             self.assertIn("/releases/latest)", text)
             self.assertNotIn("latest/download/Warfare-Front-Setup.exe", text)
             self.assertIn("Source code", text)
-        self.assertIn("The game source is not published", self.outputs["README.md"])
-        self.assertIn("未公开游戏源码", self.outputs["README.zh-CN.md"])
+        self.assertIn("Original Warfare Front game code", self.outputs["README.md"])
+        self.assertIn("原创游戏代码", self.outputs["README.zh-CN.md"])
+        for name in ("README.md", "README.zh-CN.md"):
+            self.assertIn("source-manifest.json", self.outputs[name])
+            self.assertIn("LICENSING.md", self.outputs[name])
+            self.assertIn("MIT", self.outputs[name])
+            self.assertNotIn("The game source is not published", self.outputs[name])
+            self.assertNotIn("未公开游戏源码", self.outputs[name])
+        self.assertIn("not the frozen input", self.outputs["README.md"])
+        self.assertIn("并非 V86", self.outputs["README.zh-CN.md"])
+
+    def test_open_source_claim_has_actual_reviewed_game_files(self):
+        manifest_path = ROOT / "source-manifest.json"
+        self.assertTrue(manifest_path.is_file(), "Source publication requires an actual source manifest")
+        manifest = DOCS.read_json(manifest_path)
+        self.assertEqual(manifest.get("schema", manifest.get("schemaVersion")), 1)
+        self.assertIsInstance(manifest["snapshot"], dict)
+        self.assertTrue(manifest["snapshot"])
+        files = manifest["files"]
+        self.assertTrue(files)
+        names = [row["path"] for row in files]
+        self.assertEqual(len(names), len(set(names)))
+        core = {
+            "Source/WarfareFront/WarfareFront.Build.cs",
+            "Source/WarfareFront/Public/WarfareFrontline.h",
+            "Source/WarfareFront/Private/WarfareFrontlineBattle.cpp",
+            "Source/WarfareFrontStartup/Private/WarfareFrontStartupModule.cpp",
+        }
+        self.assertTrue(core.issubset(names), "Public claims require real game modules, not only release tools")
+        for row in files:
+            with self.subTest(file=row["path"]):
+                path = PurePosixPath(row["path"])
+                self.assertFalse(path.is_absolute())
+                self.assertNotIn("..", path.parts)
+                self.assertNotIn(":", row["path"])
+                self.assertIn(row["license"], ("MIT", "MIT AND CC0-1.0"))
+                source = ROOT / path
+                self.assertTrue(source.is_file())
+                data = source.read_bytes()
+                self.assertEqual(len(data), row["size"])
+                self.assertEqual(hashlib.sha256(data).hexdigest(), row["sha256"])
+                if row["path"] in core:
+                    self.assertGreater(len(data), 100)
+
+    def test_original_source_and_existing_binary_licences_are_separate(self):
+        mit = (ROOT / "LICENSE").read_text(encoding="utf-8")
+        self.assertIn("MIT License", mit)
+        self.assertIn("ShoWTimETheKey and contributors", mit)
+        old = ROOT / "LICENSES/LicenseRef-WarfareFront-Binary-V86.txt"
+        self.assertEqual(hashlib.sha256(old.read_bytes()).hexdigest(),
+                         "8b735822c1fac5ec24d43f5ab9692e59fecaccdb3194db08c2ab400ca5da4cdd")
+        scope = (ROOT / "LICENSING.md").read_text(encoding="utf-8")
+        for boundary in ("Unreal Engine", "NVIDIA", "CC0", "docs/media/", "existing game download"):
+            self.assertIn(boundary, scope)
 
     def test_installed_notes_are_an_identical_generated_copy(self):
         base = f"docs/releases/{self.current['tag']}/"

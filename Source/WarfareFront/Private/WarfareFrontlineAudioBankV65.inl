@@ -1,0 +1,13 @@
+// Cleared original male performances; recording identities remain shared across remasters.
+{TEXT("VO_V65_Fatal_01"),TEXT("/Game/Warfare/Audio/V65"),0u,-1,VoiceFatal,TEXT("haeldb:3grunt1")},
+{TEXT("VO_V65_Fatal_02"),TEXT("/Game/Warfare/Audio/V65"),0u,-1,VoiceFatal,TEXT("haeldb:3grunt4")},
+{TEXT("VO_V65_Fatal_03"),TEXT("/Game/Warfare/Audio/V65"),0u,-1,VoiceFatal,TEXT("haeldb:3yell2")},
+{TEXT("VO_V65_Fatal_04"),TEXT("/Game/Warfare/Audio/V65"),0u,-1,VoiceFatal,TEXT("haeldb:3yell5")},
+{TEXT("VO_V65_Fatal_05"),TEXT("/Game/Warfare/Audio/V65"),0u,-1,VoiceFatal,TEXT("haeldb:2yell4")},
+{TEXT("VO_V65_Fatal_06"),TEXT("/Game/Warfare/Audio/V65"),0u,-1,VoiceFatal,TEXT("haeldb:2yell5")},
+{TEXT("VO_V65_BurningDistress_01"),TEXT("/Game/Warfare/Audio/V65"),VEvent(EFrontlineVoiceEvent::BurningPain),-1,VoiceSpeech,TEXT("haeldb:3yell13")},
+{TEXT("VO_V65_BurningDistress_02"),TEXT("/Game/Warfare/Audio/V65"),VEvent(EFrontlineVoiceEvent::BurningPain),-1,VoiceSpeech,TEXT("haeldb:3yell16")},
+{TEXT("VO_V65_BurningDistress_03"),TEXT("/Game/Warfare/Audio/V65"),VEvent(EFrontlineVoiceEvent::BurningPain),-1,VoiceSpeech,TEXT("haeldb:yell1")},
+{TEXT("VO_V65_BurningDistress_04"),TEXT("/Game/Warfare/Audio/V65"),VEvent(EFrontlineVoiceEvent::BurningPain),-1,VoiceSpeech,TEXT("haeldb:3yell14")},
+{TEXT("VO_V65_BlastDeath_01"),TEXT("/Game/Warfare/Audio/V65"),0u,-1,VoiceBlastScream,TEXT("haeldb:1yell8")},
+{TEXT("VO_V65_BlastDeath_02"),TEXT("/Game/Warfare/Audio/V65"),0u,-1,VoiceBlastScream,TEXT("haeldb:1yell6")},
